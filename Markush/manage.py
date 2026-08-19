@@ -22,6 +22,9 @@ import argparse
 from datetime import datetime
 from typing import Tuple, Optional
 
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from ADB_commands import ADBCommands
 from Deep_check import DeepSecurityCheck
 from MVT import MVTIntegration

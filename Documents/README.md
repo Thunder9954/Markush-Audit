@@ -7,7 +7,7 @@
 
 A comprehensive Android security audit framework combining ADB commands, deep-level security checks, and Mobile Verification Toolkit (MVT) for nation-state spyware detection.
 
-![Security Overview](d/1.png)
+![Security Overview](Data/1.png)
 
 ## Table of Contents
 
@@ -84,8 +84,8 @@ Detection against 16+ threat intelligence feeds including NSO Group Pegasus, Pre
 ```bash
 git clone https://github.com/Thunder9954/Audit.git
 cd Audit
-pip install -r requirements.txt
-python3 manage.py
+pip install -r Documents/requirements.txt
+python3 Markush/manage.py
 ```
 
 ## Installation
@@ -115,7 +115,7 @@ brew install android-platform-tools
 ### Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r Documents/requirements.txt
 ```
 
 MVT will be auto-installed in a virtual environment when first used.
@@ -125,15 +125,16 @@ MVT will be auto-installed in a virtual environment when first used.
 Run the audit tool:
 
 ```bash
-python3 manage.py
+python3 Markush/manage.py
 ```
 
 **CLI Options:**
 
 ```bash
-python3 manage.py --version    # Show version information
-python3 manage.py --about       # Display detailed project information
-python3 manage.py --delay 1.0   # Set custom delay between commands
+python3 Markush/manage.py --version    # Show version information
+python3 Markush/manage.py --about       # Display detailed project information
+python3 Markush/manage.py --delay 1.0   # Set custom delay between commands
+python3 Markush/manage.py --verify     # Verify release authenticity
 ```
 
 The tool will prompt you to:
@@ -253,7 +254,7 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 
 ## License
 
-Licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License - see the [LICENSE](Documents/LICENSE) file for details.
 
 ## Contact
 
@@ -295,7 +296,7 @@ Official releases are signed using Ed25519 cryptographic signatures to ensure au
 To verify that you have an authentic, unmodified release:
 
 ```bash
-python3 manage.py --verify
+python3 Markush/manage.py --verify
 ```
 
 This will display:

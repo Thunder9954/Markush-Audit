@@ -9,6 +9,8 @@ A comprehensive Android security audit framework combining ADB commands, deep-le
 
 ![Security Overview](Data/1.png)
 
+![Demo Video](Data/main.mp4)
+
 ## Table of Contents
 
 - [Features](#features)
@@ -177,6 +179,10 @@ audit_runs/
 - **Personal data protection** - Contacts, messages, and personal content are NOT included in reports
 - **Virtual environment isolation** - MVT installed in isolated environment
 - **No root required** - Works on standard Android devices
+
+![Compromised Phone Detection](Data/2.jpg)
+
+![Lock Security Types](Data/3.png)
 
 ## MVT Integration
 

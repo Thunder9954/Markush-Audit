@@ -142,17 +142,6 @@ Markush Audit evaluates Android authentication mechanisms during device security
 
 Watch the complete walkthrough of **Markush Audit**, including installation, setup, ADB connection, security analysis, MVT integration, threat detection, and report generation.
 
-<p align="center">
-  <a href="Data/main.mp4">
-    <img src="Data/m.png"
-         alt="Watch Markush Audit Demo"
-         width="900">
-  </a>
-</p>
-
-<p align="center">
-<b>▶ Click the image above to watch or download the complete demonstration video.</b>
-</p>
 
 ### What the video demonstrates
 

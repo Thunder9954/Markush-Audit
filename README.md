@@ -129,7 +129,7 @@ Detection against 16+ threat intelligence feeds including NSO Group Pegasus, Pre
 
 ### Android Device Protection
 
-![Device Lock Methods](Data/main.mp4)
+![Device Lock Methods](Data/3.png)
 
 Markush Audit evaluates Android authentication mechanisms during device security assessment:
 
@@ -138,20 +138,37 @@ Markush Audit evaluates Android authentication mechanisms during device security
 - **PIN Lock** - Numeric PIN code security
 - **Fingerprint Lock** - Biometric fingerprint authentication
 
-## Video Demo
+## 🎥 Video Demonstration
 
-The repository includes a comprehensive video demonstration:
+Watch the complete walkthrough of **Markush Audit**, including installation, setup, ADB connection, security analysis, MVT integration, threat detection, and report generation.
 
-[![Watch Demo](Data/1.png)](Data/main.mp4)
+<p align="center">
+  <a href="Data/main.mp4">
+    <img src="Data/m.png"
+         alt="Watch Markush Audit Demo"
+         width="900">
+  </a>
+</p>
 
-**Data/main.mp4** demonstrates:
+<p align="center">
+<b>▶ Click the image above to watch or download the complete demonstration video.</b>
+</p>
+
+### What the video demonstrates
+
 - Installation and setup
-- Running the audit tool
-- ADB connection process
-- Security checks execution
-- MVT spyware detection
-- Report generation
-- Real tool execution workflow
+- ADB configuration
+- Connecting an Android device
+- Deep Security Analysis
+- MVT Integration
+- Spyware Detection
+- Privacy Audit
+- HTML Report Generation
+- Complete workflow
+
+**Direct Download**
+
+[📥 Download Demo Video](Data/main.mp4)
 
 ## Technology Stack
 
@@ -453,16 +470,6 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 ![Security Overview](Data/m.png)
 
 *Markush Android Security Audit Framework*
-
-</div>
-
----
-
-<div align="center">
-
-![Compromised Device](Data/2.jpg)
-
-*Example of a potentially compromised Android device under investigation*
 
 </div>
 

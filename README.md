@@ -456,6 +456,8 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 
 </div>
 
+---
+
 <div align="center">
 
 ![Device Lock Methods](Data/3.png)

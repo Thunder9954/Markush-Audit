@@ -38,6 +38,42 @@ from project_info import (
     get_version_info,
     get_about_info
 )
+from verify_release import verify_release
+
+
+def check_release_integrity() -> bool:
+    """
+    Check release integrity by verifying signature and file hashes.
+
+    Returns:
+        bool: True if verification passes or verification files not found
+    """
+    print("Checking Release Integrity...")
+
+    try:
+        signature_valid, hashes_valid, details = verify_release()
+
+        if signature_valid and hashes_valid:
+            print(f"✓ Official Build")
+            print(f"  Signed by: {AUTHOR}")
+            return True
+        else:
+            print(f"\nWARNING")
+            print(f"This copy has been modified or is not an official release.")
+            print(f"Repository: {GITHUB_URL}")
+            print()
+            
+            response = input("Continue anyway? (Y/N, default N): ").strip().upper()
+            return response == 'Y'
+
+    except FileNotFoundError:
+        # Verification files not found - likely development build
+        print("  Verification files not found (development build)")
+        return True
+    except Exception as e:
+        print(f"  Verification error: {e}")
+        response = input("Continue anyway? (Y/N, default N): ").strip().upper()
+        return response == 'Y'
 
 
 class SecurityAuditManager:
@@ -586,11 +622,59 @@ def main():
         help='Delay between ADB commands in seconds (default: 0.5)'
     )
     
+    parser.add_argument(
+        '--verify',
+        action='store_true',
+        help='Verify release authenticity and display status'
+    )
+    
+    parser.add_argument(
+        '--skip-verify',
+        action='store_true',
+        help='Skip release integrity check'
+    )
+    
     args = parser.parse_args()
     
     if args.about:
         print(get_about_info())
         sys.exit(0)
+    
+    if args.verify:
+        print(f"Project: {PROJECT_NAME}")
+        print(f"Version: {VERSION}")
+        print(f"Author: {AUTHOR}")
+        print(f"GitHub: {GITHUB_URL}")
+        print()
+        
+        try:
+            signature_valid, hashes_valid, details = verify_release()
+            
+            print(f"Signature: {'VALID' if signature_valid else 'INVALID'}")
+            print(f"Manifest: {'VALID' if hashes_valid else 'INVALID'}")
+            print()
+            
+            overall_valid = signature_valid and hashes_valid
+            if overall_valid:
+                print("Overall Status: Official Build")
+            else:
+                print("Overall Status: Modified / Unofficial Build")
+                
+        except FileNotFoundError:
+            print("Signature: NOT FOUND")
+            print("Manifest: NOT FOUND")
+            print()
+            print("Overall Status: Development Build (no verification files)")
+        except Exception as e:
+            print(f"Error: {e}")
+            
+        sys.exit(0)
+    
+    # Check release integrity unless skipped
+    if not args.skip_verify:
+        if not check_release_integrity():
+            print("\nAudit cancelled by user.")
+            sys.exit(0)
     
     try:
         # Create manager with delay from args or prompt

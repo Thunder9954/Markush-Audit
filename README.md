@@ -282,6 +282,62 @@ For bug reports, feature suggestions, or questions:
 - [Citizen Lab](https://citizenlab.ca/)
 - [EFF Surveillance Self-Defense](https://ssd.eff.org/)
 
+## Release Verification
+
+Official releases are signed using Ed25519 cryptographic signatures to ensure authenticity and integrity. Each release includes:
+
+- `manifest.json` - SHA-256 hashes of all project files
+- `manifest.sig` - Ed25519 signature of the manifest
+- `public_key.pem` - Public verification key
+
+### Verify a Release
+
+To verify that you have an authentic, unmodified release:
+
+```bash
+python3 manage.py --verify
+```
+
+This will display:
+- Project information
+- Signature status (VALID/INVALID)
+- Manifest status (VALID/INVALID)
+- Overall build status
+
+### Verification Output
+
+**Official Build:**
+```
+Project: Markush Audit
+Version: 1.0.0
+Author: Purn Vadodariya
+GitHub: https://github.com/Thunder9954/Audit
+
+Signature: VALID
+Manifest: VALID
+
+Overall Status: Official Build
+```
+
+**Modified/Unofficial Build:**
+```
+Signature: INVALID
+Manifest: INVALID
+
+Overall Status: Modified / Unofficial Build
+```
+
+### Development Builds
+
+If verification files are not found, the tool will report a development build. This is normal when running from source code that hasn't been packaged as a release.
+
+### Security Notes
+
+- The private signing key is never committed to the repository
+- Verification uses only the public key, which is safe to distribute
+- The verification process is transparent and can be audited
+- Modified or unofficial builds will still run with a warning
+
 ---
 
 **This tool is for legitimate security auditing only. Unauthorized access to devices is illegal. Use only on devices you own or have explicit permission to audit.**

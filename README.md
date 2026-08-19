@@ -129,7 +129,7 @@ Detection against 16+ threat intelligence feeds including NSO Group Pegasus, Pre
 
 ### Android Device Protection
 
-![Device Lock Methods](Data/3.png)
+![Device Lock Methods](Data/main.mp4)
 
 Markush Audit evaluates Android authentication mechanisms during device security assessment:
 
@@ -450,9 +450,9 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 
 <div align="center">
 
-![Security Overview](Data/1.png)
+![Security Overview](Data/m.png)
 
-*Professional Android Security Audit Framework*
+*Markush Android Security Audit Framework*
 
 </div>
 
@@ -460,7 +460,7 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 
 <div align="center">
 
-![Compromised Device](Data/2.png)
+![Compromised Device](Data/2.jpg)
 
 *Example of a potentially compromised Android device under investigation*
 
@@ -576,12 +576,6 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 - [ ] SIEM integration
 - [ ] Mobile app companion
 
-### Version 3.0.0 (Future)
-- [ ] iOS support
-- [ ] API for integration
-- [ ] Custom IOC feeds
-- [ ] Team collaboration features
-- [ ] Advanced reporting templates
 
 ## Contributing
 

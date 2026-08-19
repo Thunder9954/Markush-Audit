@@ -85,7 +85,7 @@ Detection against 16+ threat intelligence feeds:
 ## 📁 Project Structure
 
 ```
-Android Security Audit Tool/
+Markush_audit/
 ├── ADB_commands.py              # ADB-based security audit module
 ├── Deep_check.py               # Deep-level security checks (kernel, SELinux, network)
 ├── MVT.py                      # MVT integration for spyware detection
@@ -93,6 +93,7 @@ Android Security Audit Tool/
 ├── requirements.txt            # Python dependencies with version constraints
 ├── requirementsV.txt           # Python dependencies (latest versions)
 ├── README.md                   # This file
+├── LICENSE                     # MIT License
 ├── python-pip/                 # Virtual environment for MVT (auto-created)
 ├── audit_runs/                 # Audit output directory
 │   └── run_YYYYMMDD_HHMMSS/   # Timestamped audit results

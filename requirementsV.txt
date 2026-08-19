@@ -1,0 +1,62 @@
+# Master Security Audit Tool - Python Dependencies (No Version Constraints)
+# 
+# This file installs the LATEST available versions of all packages.
+# Use this if you want the most recent versions instead of specific versions.
+#
+# NOTE: This tool uses a virtual environment for MVT installation.
+# Most dependencies are installed automatically when you run the tool.
+# 
+# System Requirements (not Python packages):
+# - ADB (Android Debug Bridge) - must be installed system-wide
+#   Install via: sudo apt install adb (Debian/Ubuntu)
+#   or: https://developer.android.com/studio/releases/platform-tools
+#
+# Python Version: 3.7+
+
+# Core MVT (Mobile Verification Toolkit) - installed automatically in venv
+# If you want to install manually instead of letting the tool auto-install:
+mvt
+
+# MVT Dependencies (auto-installed with MVT, listed for reference)
+# These are NOT required to be installed manually - MVT handles them
+adb-shell
+appdirs
+betterproto2
+click
+cryptography
+iOSbackup
+libusb1
+NSKeyedUnArchiver
+packaging
+pyahocorasick
+pydantic
+pydantic-core
+pydantic-settings
+python-dateutil
+requests
+rich
+simplejson
+tld
+tzdata
+PyYAML
+annotated-types
+cffi
+markdown-it-py
+mdurl
+pyasn1
+pycparser
+pycryptodome
+rsa
+pygments
+
+# Optional: For enhanced functionality
+colorama
+tqdm
+tabulate
+
+# Development/Testing (optional, for contributors)
+pytest
+pytest-cov
+black
+flake8
+mypy

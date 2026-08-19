@@ -456,6 +456,7 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 
 </div>
 
+
 ---
 
 <div align="center">
@@ -465,6 +466,8 @@ MVT (Mobile Verification Toolkit) is developed by Amnesty International's Securi
 *Android authentication mechanisms evaluated during security assessment*
 
 </div>
+
+---
 
 ## FAQ
 
@@ -689,7 +692,7 @@ This project would not be possible without the contributions of:
 
 This tool is for legitimate security auditing only. Unauthorized access to devices is illegal. Use only on devices you own or have explicit permission to audit.
 
-**Made with ❤️ by Purn Vadodariya**
+**Made with  by Purn Vadodariya**
 
 [⭐ Star this project](https://github.com/Thunder9954/Audit) • [🐛 Report issues](https://github.com/Thunder9954/Audit/issues) • [📖 Documentation](https://github.com/Thunder9954/Audit)
 

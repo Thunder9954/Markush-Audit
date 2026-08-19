@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""
-Markush_audit - ADB Commands Module
-Handles all ADB-based security audit operations
+# =============================================================================
+# Markush Audit
+# Copyright (c) 2026 Purn Vadodariya
+# Author: Purn Vadodariya
+# GitHub: https://github.com/Thunder9954
+# License: MIT
+# =============================================================================
 
-Creator: Purn Vadodariya
-Email: purn872008@gmail.com
-GitHub: https://github.com/Thunder9954/Audit
+"""
+ADB Commands Module
+Handles all ADB-based security audit operations.
 """
 
 import subprocess
@@ -14,6 +18,8 @@ import json
 import os
 from datetime import datetime
 from typing import Dict, List, Tuple
+
+from project_info import PROJECT_NAME, AUTHOR, EMAIL, GITHUB_URL
 
 
 class ADBCommands:

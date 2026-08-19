@@ -1,4 +1,4 @@
-# Markush_audit
+# Markush Audit
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.7%2B-green.svg)
@@ -126,6 +126,14 @@ Run the audit tool:
 
 ```bash
 python3 manage.py
+```
+
+**CLI Options:**
+
+```bash
+python3 manage.py --version    # Show version information
+python3 manage.py --about       # Display detailed project information
+python3 manage.py --delay 1.0   # Set custom delay between commands
 ```
 
 The tool will prompt you to:

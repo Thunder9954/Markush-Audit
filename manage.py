@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""
-Markush_audit - Master Security Audit Manager
-Main controller integrating ADB commands, Deep security checks, and MVT
-Handles user input, delays, permissions, connection management, and orchestration
+# =============================================================================
+# Markush Audit
+# Copyright (c) 2026 Purn Vadodariya
+# Author: Purn Vadodariya
+# GitHub: https://github.com/Thunder9954
+# License: MIT
+# =============================================================================
 
-Creator: Purn Vadodariya
-Email: purn872008@gmail.com
-GitHub: https://github.com/Thunder9954/Audit
+"""
+Master Security Audit Manager
+Main controller integrating ADB commands, Deep security checks, and MVT.
+Handles user input, delays, permissions, connection management, and orchestration.
 """
 
 import sys
@@ -14,12 +18,26 @@ import os
 import time
 import getpass
 import subprocess
+import argparse
 from datetime import datetime
 from typing import Tuple, Optional
 
 from ADB_commands import ADBCommands
 from Deep_check import DeepSecurityCheck
 from MVT import MVTIntegration
+from project_info import (
+    PROJECT_NAME,
+    PROJECT_DESCRIPTION,
+    AUTHOR,
+    COPYRIGHT,
+    GITHUB_URL,
+    LICENSE,
+    VERSION,
+    EMAIL,
+    get_banner,
+    get_version_info,
+    get_about_info
+)
 
 
 class SecurityAuditManager:
@@ -42,16 +60,7 @@ class SecurityAuditManager:
         
     def print_banner(self):
         """Print welcome banner"""
-        print("=" * 70)
-        print(" " * 20 + "🔐 MARKUSH_AUDIT 🔐")
-        print(" " * 15 + "MASTER SECURITY AUDIT TOOL")
-        print(" " * 10 + "ADB + Deep-Level Security + MVT Integration")
-        print("=" * 70)
-        print(" " * 18 + "Created by: Purn Vadodariya")
-        print(" " * 16 + "Email: purn872008@gmail.com")
-        print(" " * 12 + "GitHub: https://github.com/Thunder9954/Audit")
-        print("=" * 70)
-        print()
+        print(get_banner())
     
     def print_section(self, title: str):
         """Print section header"""
@@ -553,11 +562,43 @@ class SecurityAuditManager:
 
 def main():
     """Main entry point"""
+    parser = argparse.ArgumentParser(
+        description=PROJECT_DESCRIPTION,
+        formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    
+    parser.add_argument(
+        '--version',
+        action='version',
+        version=get_version_info()
+    )
+    
+    parser.add_argument(
+        '--about',
+        action='store_true',
+        help='Display detailed project information'
+    )
+    
+    parser.add_argument(
+        '--delay',
+        type=float,
+        default=0.5,
+        help='Delay between ADB commands in seconds (default: 0.5)'
+    )
+    
+    args = parser.parse_args()
+    
+    if args.about:
+        print(get_about_info())
+        sys.exit(0)
+    
     try:
-        # Get delay setting from user
-        print("Configuration:")
-        delay_input = input("  Enter delay between commands (seconds, default 0.5): ").strip()
-        delay = float(delay_input) if delay_input else 0.5
+        # Create manager with delay from args or prompt
+        delay = args.delay
+        if delay == 0.5:
+            print("Configuration:")
+            delay_input = input("  Enter delay between commands (seconds, default 0.5): ").strip()
+            delay = float(delay_input) if delay_input else 0.5
         
         # Create manager
         manager = SecurityAuditManager(default_delay=delay)

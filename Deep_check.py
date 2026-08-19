@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-"""
-Markush_audit - Deep-Level Security Check Module
-Handles kernel, SELinux, processes, network, baseband/modem, and kernel module checks
+# =============================================================================
+# Markush Audit
+# Copyright (c) 2026 Purn Vadodariya
+# Author: Purn Vadodariya
+# GitHub: https://github.com/Thunder9954
+# License: MIT
+# =============================================================================
 
-Creator: Purn Vadodariya
-Email: purn872008@gmail.com
-GitHub: https://github.com/Thunder9954/Audit
+"""
+Deep-Level Security Check Module
+Handles kernel, SELinux, processes, network, baseband/modem, and kernel module checks.
 """
 
 import subprocess
 import time
 import os
 from typing import Dict, List, Tuple
+
+from project_info import PROJECT_NAME, AUTHOR, EMAIL, GITHUB_URL
 
 
 class DeepSecurityCheck:

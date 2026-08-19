@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-ADB Commands Module
+Markush_audit - ADB Commands Module
 Handles all ADB-based security audit operations
+
+Creator: Purn Vadodariya
+Email: purn872008@gmail.com
+GitHub: https://github.com/Thunder9954/Audit
 """
 
 import subprocess

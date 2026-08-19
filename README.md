@@ -1,9 +1,10 @@
-# 🔐 Master Security Audit Tool
+# 🔐 Markush_audit - Master Security Audit Tool
 
 A comprehensive Android security audit tool combining ADB commands, deep-level security checks, and Mobile Verification Toolkit (MVT) for nation-state spyware detection.
 
 **Creator:** Purn Vadodariya  
-**Email:** purn872008@gmail.com
+**Email:** purn872008@gmail.com  
+**GitHub:** https://github.com/Thunder9954/Audit
 
 ## 📸 Project Overview
 

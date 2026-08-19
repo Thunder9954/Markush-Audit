@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
-Master Security Audit Manager
+Markush_audit - Master Security Audit Manager
 Main controller integrating ADB commands, Deep security checks, and MVT
 Handles user input, delays, permissions, connection management, and orchestration
+
+Creator: Purn Vadodariya
+Email: purn872008@gmail.com
+GitHub: https://github.com/Thunder9954/Audit
 """
 
 import sys
@@ -39,8 +43,13 @@ class SecurityAuditManager:
     def print_banner(self):
         """Print welcome banner"""
         print("=" * 70)
+        print(" " * 20 + "🔐 MARKUSH_AUDIT 🔐")
         print(" " * 15 + "MASTER SECURITY AUDIT TOOL")
         print(" " * 10 + "ADB + Deep-Level Security + MVT Integration")
+        print("=" * 70)
+        print(" " * 18 + "Created by: Purn Vadodariya")
+        print(" " * 16 + "Email: purn872008@gmail.com")
+        print(" " * 12 + "GitHub: https://github.com/Thunder9954/Audit")
         print("=" * 70)
         print()
     

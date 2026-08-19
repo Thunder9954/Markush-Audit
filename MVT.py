@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-MVT (Mobile Verification Toolkit) Module
+Markush_audit - MVT (Mobile Verification Toolkit) Module
 Handles MVT integration for nation-state spyware detection
+
+Creator: Purn Vadodariya
+Email: purn872008@gmail.com
+GitHub: https://github.com/Thunder9954/Audit
 """
 
 import subprocess

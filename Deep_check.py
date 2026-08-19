@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-Deep-Level Security Check Module
+Markush_audit - Deep-Level Security Check Module
 Handles kernel, SELinux, processes, network, baseband/modem, and kernel module checks
+
+Creator: Purn Vadodariya
+Email: purn872008@gmail.com
+GitHub: https://github.com/Thunder9954/Audit
 """
 
 import subprocess
